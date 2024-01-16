@@ -1,0 +1,43 @@
+* {
+  font-family: 'Roboto';
+}
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemContainer {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.domainLogo {
+  width: 25px;
+  margin-right: 30px;
+}
+.deleteLogo {
+  margin-right: 50px;
+}
+.time {
+  font-weight: 700;
+  color: #64748b;
+}
+.title {
+  font-weight: 700;
+  color: #475569;
+  margin-right: 10px;
+}
+.domainUrl {
+  font-weight: 500;
+  color: #64748b;
+  margin-right: 10px;
+}
+.button {
+  background-color: transparent;
+  border: 0px solid;
+}
+.button:hover {
+  cursor: pointer;
+}
