@@ -18,7 +18,7 @@ const BrowserElement = props => {
       <button
         onClick={deleteItem}
         type="button"
-        data-testis="delete"
+        data-testid="delete"
         className="button"
       >
         <img
