@@ -85,14 +85,13 @@ class BrowserContainer extends Component {
     this.setState({value: value1})
   }
 
-
   deleteItemFromList = uniqueValue => {
-  const {HistoryList} = this.state
-  const updatedList = HistoryList.filter(each => each.id !== uniqueValue)
-  const updateAltMsg = updatedList.length === 0 ? 'There is no history to show' : ''
-  this.setState({HistoryList: updatedList, altMsg: updateAltMsg})
-}
-
+    const {HistoryList} = this.state
+    const updatedList = HistoryList.filter(each => each.id !== uniqueValue)
+    const updateAltMsg =
+      updatedList.length === 0 ? 'There is no history to show' : ''
+    this.setState({HistoryList: updatedList, altMsg: updateAltMsg})
+  }
 
   render() {
     const {value, HistoryList} = this.state
@@ -107,12 +106,13 @@ class BrowserContainer extends Component {
     return (
       <div className="mainContainer">
         <div className="navBarSection">
-          <div className="">
+          <div className="historyBox">
             <img
               src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
               alt="app logo"
               className="appLogo"
             />
+            <h1 className="developedName">Developed By : Gaddi Rakesh</h1>
           </div>
           <div className="searchContainer">
             <img
