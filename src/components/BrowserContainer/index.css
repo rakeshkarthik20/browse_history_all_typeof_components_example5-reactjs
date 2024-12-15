@@ -6,11 +6,22 @@
   align-items: center;
   width: 100%;
 }
+.historyBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.developedName {
+  font-size: 15px;
+  margin-left: 10px;
+  color:white;
+}
 .appLogo {
   height: 50px;
-  padding: 10px;
   margin-left: 10px;
 }
+
 .searchContainer {
   margin-left: 450px;
   align-self: center;
