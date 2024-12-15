@@ -85,15 +85,14 @@ class BrowserContainer extends Component {
     this.setState({value: value1})
   }
 
-  delteItemFromList = uniqueValue => {
-    const {HistoryList} = this.state
-    const updatedList = HistoryList.filter(each => each.id !== uniqueValue)
-    let updateAltMsg = ''
-    if (updatedList.length === 0) {
-      updateAltMsg = 'There is no history to show'
-    }
-    this.setState({HistoryList: updatedList, altMsg: updateAltMsg})
-  }
+
+  deleteItemFromList = uniqueValue => {
+  const {HistoryList} = this.state
+  const updatedList = HistoryList.filter(each => each.id !== uniqueValue)
+  const updateAltMsg = updatedList.length === 0 ? 'There is no history to show' : ''
+  this.setState({HistoryList: updatedList, altMsg: updateAltMsg})
+}
+
 
   render() {
     const {value, HistoryList} = this.state
@@ -135,7 +134,7 @@ class BrowserContainer extends Component {
               uniqueValue={each.id}
               key={each.id}
               HistoryListItem={each}
-              deletedItem={this.delteItemFromList}
+              deletedItem={this.deleteItemFromList}
             />
           ))}
         </ul>
